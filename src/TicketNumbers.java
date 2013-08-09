@@ -1,11 +1,24 @@
-
+import java.util.Scanner;
 public class TicketNumbers {
 
 	public static void main(String[] args) {
-		// -------INSTRUCTIONS-------
-		// 1. Copy and paste your code for the ticket numbers problem here (from yesterday)
-		// 2. Then delete these comments
-		// 3. Finally, commit and push the project containing this file to GitHub
+		int ticketNumber, stem, checkDigit;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please input a 6 Digit Ticket Number: ");
+		ticketNumber = sc.nextInt();
+		stem = ticketNumber / 10;
+		checkDigit = ticketNumber % 10;
+		
+		while(checkDigit != stem % 7){
+			System.out.println("NOT VALID");
+			System.out.print("Try Again: ");
+			ticketNumber = sc.nextInt();
+			stem = ticketNumber / 10;
+			checkDigit = ticketNumber % 10;
+			
+		}
+			System.out.print("Vaild VAYCAY MODE!");
 
 	}
 
